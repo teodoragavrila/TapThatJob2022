@@ -3,6 +3,7 @@ import Comments from './components/Comments';
 import Layout from './components/layout/Layout';
 import GameDetails from './pages/GameDetails';
 import Games from './pages/Games';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/games/:gameId/*" element={<GameDetails />} >
               <Route path='comments' element={<Comments />} />
             </Route>
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
       </main>

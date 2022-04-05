@@ -1,4 +1,4 @@
-import { Link, Outlet, useParams } from "react-router-dom";
+import { Link, Outlet, useOutlet, useParams } from "react-router-dom";
 import GameItemDetails from "../components/GameItemDetails";
 
 const DUMMY_GAMES = [
@@ -12,6 +12,8 @@ const GameDetails = () => {
   const { gameId } = params;
   const game = DUMMY_GAMES.find(dummyGame => dummyGame.id === gameId);
 
+  const outlet = useOutlet()
+
   if (!game) {
       return <p>No game found!</p>
   }
@@ -19,8 +21,7 @@ const GameDetails = () => {
   return (
     <>
         <GameItemDetails name={game.name} details={game.details} />
-        <Link to="comments">Comments</Link>
-        <Outlet />
+        {outlet || <Link to="comments">Comments</Link>}
     </>
   );
 };

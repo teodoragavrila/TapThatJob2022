@@ -1,7 +1,7 @@
 const Comments = () => {
   return (
     <>
-      <p>Comments</p>
+      <p>Comment List</p>
       <p>Some comment</p>
     </>
   );
