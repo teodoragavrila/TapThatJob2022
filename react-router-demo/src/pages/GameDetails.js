@@ -1,5 +1,4 @@
-import { Route, Routes, useParams } from "react-router-dom";
-import Comments from "../components/Comments";
+import { Outlet, useParams } from "react-router-dom";
 
 const GameDetails = () => {
   const params = useParams();
@@ -7,9 +6,7 @@ const GameDetails = () => {
     <>
         <h1>Game Details</h1>
         <p>{params.gameId}</p>
-        <Routes>
-            <Route path='comments' element={<Comments />} />
-        </Routes>
+        <Outlet />
     </>
   );
 };
