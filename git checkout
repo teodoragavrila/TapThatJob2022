@@ -1,0 +1,15 @@
+[33mae17418[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Json server
+[33mf97a6c5[m NewGame page and components
+[33mde42f88[m Extracting params - sort games
+[33meec18f3[m NotFound page and useOutlet
+[33mda65531[m Show game details
+[33m16ef6fa[m Dummy game list
+[33m5c20497[m Comments link in GameDetails
+[33mdb51e69[m Nested route in App.js
+[33m3e4098c[m Nested routes
+[33mc196036[m Extract navigation params
+[33mb387e33[m Main navigation
+[33m7f6437e[m Clean and first routes
+[33mad5445f[m install react-router-dom version 6
+[33med961b0[m CreateReactApp
+[33m93cd777[m Initial commit
