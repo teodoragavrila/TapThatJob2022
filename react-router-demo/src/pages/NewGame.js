@@ -1,15 +1,25 @@
 import { useNavigate } from 'react-router-dom';
 import GameForm from '../components/GameForm';
 
+import useHttp from '../hooks/use-http';
+import { addGame } from '../lib/api';
+import { useEffect } from 'react';
+
 const NewGame = () => {
-  const navigate = useNavigate();
+    const { sendRequest, status } = useHttp(addGame);
+    const navigate = useNavigate();
 
-  const addGameHandler = (gameData) => {
-    alert(JSON.stringify(gameData));
-    navigate('/games');
-  };
+    useEffect(() => {
+        if (status === 'completed') {
+          navigate('/games');
+        }
+    }, [status, navigate]);
 
-  return <GameForm onAddGame={addGameHandler} />;
+    const addGameHandler = (gameData) => {
+        sendRequest(gameData);
+    };
+
+    return <GameForm onAddGame={addGameHandler} />;
 };
 
 export default NewGame;
